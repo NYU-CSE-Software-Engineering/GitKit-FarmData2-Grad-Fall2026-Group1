@@ -124,7 +124,7 @@ catch {}
 
 #### Creating Nested Vue Components ####
 
-When a _parent_ Vue component contains a nested _child_ Vue component the parent component needs to have access to the child component.  Within Drupal this happens as explained below.  To support testing of nested components it is necessary that the parent comonent `import` the child component when it is running with the Cypress copmponet test runner but not when being used in a FarmData2 page served by Drupal. To accompolish this you will add a `try/catch` to the top of any Vue component file that uses a nested component.  For example, the code below appears at the top of the `DateRandeSelectionComponent.js` file becuase that component uses the `DateSelectionComponent`:
+When a _parent_ Vue component contains a nested _child_ Vue component the parent component needs to have access to the child component.  Within Drupal this happens as explained below.  To support testing of nested components it is necessary that the parent component `import` the child component when it is running with the Cypress copmponet test runner but not when being used in a FarmData2 page served by Drupal. To accompolish this you will add a `try/catch` to the top of any Vue component file that uses a nested component.  For example, the code below appears at the top of the `DateRandeSelectionComponent.js` file becuase that component uses the `DateSelectionComponent`:
 
 ```JavaScript
 try {
@@ -147,7 +147,7 @@ scripts[] = '../resources/dropdownWithAllComponent.js'
 
 #### Using Nested Vue Components #### 
 
-If a Vue component contains a nested Vue compnent then both the nested component and the parent component must be added to the `scripts[]`. The nested comonent must be listed before the parent component.  For example, the following lines make the `DateSelectionComponent` and the `DateRandeSelectionComponent` avaialable on the `FD2 Example` tab:
+If a Vue component contains a nested Vue compnent then both the nested component and the parent component must be added to the `scripts[]`. The nested component must be listed before the parent component.  For example, the following lines make the `DateSelectionComponent` and the `DateRandeSelectionComponent` avaialable on the `FD2 Example` tab:
 ```php
 scripts[] = '../resources/DateSelectionComponent.js'
 scripts[] = '../resources/DateRangeSelectionComponent.js'
@@ -155,7 +155,7 @@ scripts[] = '../resources/DateRangeSelectionComponent.js'
 
 ## JavaScript Libraries ##
 
-FarmData2 also uses a number of custom JavaScript libraries that are contained in the `farmdata2_modules/fd2_tabs/resources` folder.  Similar to what was done with Vue comonents and nested Vue components there are blocks of code that will appear at the top and bottom of each JavaScript file so that they can be served by Drupal and be tested within the Cypress End-to-End test runner.
+FarmData2 also uses a number of custom JavaScript libraries that are contained in the `farmdata2_modules/fd2_tabs/resources` folder.  Similar to what was done with Vue components and nested Vue components there are blocks of code that will appear at the top and bottom of each JavaScript file so that they can be served by Drupal and be tested within the Cypress End-to-End test runner.
 
 Any modules that are needed by the library will be `required` by a block of code at the top of the file.  For example, the code in the `FarmOSAPI.js` file uses the `axios` module.  These lines appear at the top of that file:
 
