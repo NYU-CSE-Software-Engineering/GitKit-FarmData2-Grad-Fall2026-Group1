@@ -31,4 +31,4 @@ All other content, including code snippets posted in public forums, is licensed 
 
 Attribution of contributions to the FarmData2 repository are maintained in the logs of the git version control system.  The [AUTHORS.md](AUTHORS.md) file contains a list of all contributors to the repository and is updated periodically.
 
-Attribution of content in public forums is typically maintained by the appropriate forum (e.g. threads, usernames, cross linked issues, etc). If not however, it is the contributor's responsibility to ensure that proper attribution is made based.
+Attribution of content in public forums is typically maintained by the appropriate forum (e.g. threads, usernames, cross linked issues, etc). If not however, it is the contributor's responsibility to ensure that proper attribution is made.
